@@ -1,0 +1,10 @@
+
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+        "top"   : "ccnanoclock:blocks/nanoclock_top",
+        "side"  : "ccnanoclock:blocks/nanoclock_side",
+        "bottom": "ccnanoclock:blocks/nanoclock_bottom"
+
+    }
+}
