@@ -21,7 +21,7 @@ plugins {
 }
 */
 version = "0.0.1"
-group= "iunius118.mods.cc3dprojector" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group= "iunius118.mods.ccnanoclock" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "[1.8.9]CCNanoClock"
 
 tasks.withType(Jar) {compileJava.options.encoding = 'UTF-8'}
