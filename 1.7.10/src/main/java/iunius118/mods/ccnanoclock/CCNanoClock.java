@@ -1,19 +1,16 @@
 package iunius118.mods.ccnanoclock;
 
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import dan200.computercraft.api.ComputerCraftAPI;
 import iunius118.mods.ccnanoclock.block.BlockNanoClock;
 import iunius118.mods.ccnanoclock.peripheral.PeripheralProvider;
 import net.minecraft.block.Block;
-import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(
 		modid = CCNanoClock.MOD_ID,
@@ -34,7 +31,7 @@ public class CCNanoClock {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		blockNanoClock = new BlockNanoClock().setUnlocalizedName(NAME_BLOCK_NANO_CLOCK);
+		blockNanoClock = new BlockNanoClock().setBlockName(NAME_BLOCK_NANO_CLOCK);
 		GameRegistry.registerBlock(blockNanoClock, NAME_BLOCK_NANO_CLOCK);
 
 		GameRegistry.addRecipe(new ItemStack(blockNanoClock),
@@ -47,10 +44,6 @@ public class CCNanoClock {
 			       '=', Items.repeater );
 
 		ComputerCraftAPI.registerPeripheralProvider(new PeripheralProvider());
-
-		if (event.getSide().isClient()) {
-			ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(blockNanoClock), 0, new ModelResourceLocation(MOD_ID + ":" + NAME_BLOCK_NANO_CLOCK, "inventory"));
-		}
 	}
 
 }
