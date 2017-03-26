@@ -1,0 +1,18 @@
+[
+{
+  "modid" : "mod_CCNanoClock",
+  "name" : "CCNanoClock",
+  "version" : "0.0.1",
+  "url" : "https://github.com/Iunius118/CCNanoClock",
+  "credits" : "",
+  "authors": [
+    "Iunius"
+  ],
+  "description": "Adds a nanosecond clock peripheral for ComputerCraft.",
+  "logoFile" : "",
+  "updateUrl" : "",
+  "parent" : "",
+  "screenshots": [
+  ]
+}
+]
