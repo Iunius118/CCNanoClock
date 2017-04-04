@@ -16,10 +16,10 @@ Default block ID (for MC1.2.5) = 2420 (configurable)
 
 ## Lua sample code
 ```Lua
--- for MC1.8.9 and MC1.7.10
-clock = peripheral.find( "nanoclock" ).newNanoClock()
+-- for MC1.8.9 or MC1.7.10
+local clock = peripheral.find( "nanoclock" ).newNanoClock()
 --[[ -- for MC1.2.5
-clock = peripheral.wrap( <direction> )
+local clock = peripheral.wrap( <direction> )
 clock.reset()
 ]]
 
