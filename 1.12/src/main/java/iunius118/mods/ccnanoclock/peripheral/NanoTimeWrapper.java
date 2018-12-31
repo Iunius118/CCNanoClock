@@ -5,7 +5,6 @@ import dan200.computercraft.api.lua.ILuaObject;
 import dan200.computercraft.api.lua.LuaException;
 
 public class NanoTimeWrapper implements ILuaObject {
-
 	public long startNanoTime = System.nanoTime();
 
 	@Override
@@ -20,7 +19,7 @@ public class NanoTimeWrapper implements ILuaObject {
 			long nanotime = System.nanoTime() - startNanoTime;
 			return new Object[] { Double.valueOf(nanotime) };
 
-		case 1: 	// renew()
+		case 1: 	// reset()
 			long oldNanoTime = System.nanoTime() - startNanoTime;
 			startNanoTime = System.nanoTime();
 			return new Object[] { Double.valueOf(oldNanoTime) };
@@ -29,5 +28,4 @@ public class NanoTimeWrapper implements ILuaObject {
 
 		return null;
 	}
-
 }

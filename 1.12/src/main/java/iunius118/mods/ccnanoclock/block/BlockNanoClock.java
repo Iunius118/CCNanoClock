@@ -1,30 +1,27 @@
 package iunius118.mods.ccnanoclock.block;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockNanoClock extends Block {
-
 	public BlockNanoClock() {
-		super(Material.ground);
-		this.setStepSound(soundTypeStone);
-		this.setCreativeTab(CreativeTabs.tabDecorations);
+		super(Material.GROUND);
+		this.setSoundType(SoundType.STONE);
+		this.setCreativeTab(CreativeTabs.DECORATIONS);
 	}
 
-	@Override
-	public int getRenderType() {
-		return 3;
-	}
+    @Override
+    @Deprecated
+    public boolean isOpaqueCube(IBlockState state) {
+        return false;
+    }
 
-	@Override
-	public boolean isOpaqueCube() {
-		return false;
-	}
-
-	@Override
-	public boolean isFullCube() {
-		return false;
-	}
-
+    @Override
+    @Deprecated
+    public boolean isFullCube(IBlockState state) {
+        return false;
+    }
 }

@@ -6,7 +6,6 @@ import dan200.computercraft.api.peripheral.IComputerAccess;
 import dan200.computercraft.api.peripheral.IPeripheral;
 
 public class PeripheralNanoClock implements IPeripheral {
-
 	@Override
 	public String getType() {
 		return "nanoclock";
@@ -41,5 +40,4 @@ public class PeripheralNanoClock implements IPeripheral {
 	public boolean equals(IPeripheral other) {
 		return (other instanceof PeripheralNanoClock);
 	}
-
 }
