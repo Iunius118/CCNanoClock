@@ -1,4 +1,5 @@
 # CCNanoClock
+Nanosecond timer peripheral for ComputerCraft 1.80pr1/1.79/1.75/1.41 (Minecraft 1.12.x/1.8.9/1.7.10/1.2.5 with Forge)
 
 ## Download
 
