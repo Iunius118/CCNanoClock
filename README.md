@@ -62,4 +62,4 @@ print( clock.nanoTime() )  -- print the value about 1000000000
 ```
 
 ___
-Copyright 2018 Iunius118
+Copyright 2017-2018 Iunius118
